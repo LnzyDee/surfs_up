@@ -24,7 +24,7 @@ Analyzing weather data through a [SQLite database](/hawaii.sqlite) before determ
 - Two additional queries that can be done to gather more data for June and December would be to check precipitation numbers for each month:
   - `june_prcp = session.query(Measurement.date, Measurement.prcp).filter(extract('month', Measurement.date) == 6).all()`
   - `dec_prcp = session.query(Measurement.date, Measurement.prcp).filter(extract('month', Measurement.date) == 12).all()`
--  By simply adjusting the query for the temperatures to search instead for the precipitation data for both June and December, we can get the summary statistics regarding the precipitation for each month, as shown below. Precipitation doesn't vary much between the two. December's max comes out slight higher than June's.
+-  By simply adjusting the query for the temperatures to search instead for the precipitation data for both June and December, we can get the summary statistics regarding the precipitation for each month, as shown below. Precipitation doesn't vary much between the two. December's max comes out slightly higher than June's.
 
 ![June Precipitation Results](Resources/june_prcp_sumstat.png) ![December Precipitation Results](Resources/dec_prcp_sumstat.png)
 
